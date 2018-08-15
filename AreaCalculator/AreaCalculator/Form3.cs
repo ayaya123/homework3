@@ -22,7 +22,20 @@ namespace AreaCalculator
             this.Hide();
             mainForm Form = new mainForm();
             Form.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form5 Form = new Form5();
+            double radius = double.Parse(textBox1.Text);
+            Form.label1.Text= calcCircleArea(radius).ToString();
             Form.Show();
+        }
+
+        private double calcCircleArea(double radius)
+        {
+            double area = 3.1415926 * radius * radius;
+            return area;
         }
     }
 }
