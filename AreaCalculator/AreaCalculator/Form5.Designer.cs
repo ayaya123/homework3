@@ -48,6 +48,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form5";
             this.Text = "计算结果";
+            this.Load += new System.EventHandler(this.Form5_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

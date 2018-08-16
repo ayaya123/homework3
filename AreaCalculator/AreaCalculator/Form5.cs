@@ -16,5 +16,10 @@ namespace AreaCalculator
         {
             InitializeComponent();
         }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
