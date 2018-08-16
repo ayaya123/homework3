@@ -86,7 +86,7 @@ namespace AreaCalculator
                     }
                     else
                     {
-                        Form.label1.Text = "面积为：" + (6.4516 * Math.Abs(Area + 0.5 * detCalc(LastX, LastY, NowX, NowY) + 0.5 * detCalc(NowX, NowY, IniX, IniY))).ToString("F3") + "平方厘米";
+                        Form.label1.Text = "面积为：" + (6.4516 * Math.Abs(Area + 0.5 * detCalc(LastX, LastY, NowX, NowY) + 0.5 * detCalc(NowX, NowY, IniX, IniY))).ToString("F3") + "平方英寸";
                     }
                     if (count > 2)
                     {
