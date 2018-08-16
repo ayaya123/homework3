@@ -30,20 +30,29 @@ namespace AreaCalculator
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //if (string.IsNullOrEmpty(cordX.Text) || string.IsNullOrEmpty(cordY.Text))
-            count = count + 1;
-
-            LastX = NowX;
-            LastY = NowY;
-            NowX = double.Parse(cordX.Text);
-            NowY = double.Parse(cordY.Text);
-
-            Area = Area + 0.5 * detCalc(LastX, LastY, NowX, NowY);
-
-            if (count == 1)
+            if (string.IsNullOrEmpty(cordX.Text) || string.IsNullOrEmpty(cordY.Text))
             {
-                IniX = NowX;
-                IniY = NowY;
+                Form4 Form = new Form4();
+                Form.label1.Text = "请输入合法数值";
+                Form.label2.Text = "";
+                Form.Show();
+            }
+            else
+            {
+                count = count + 1;
+
+                LastX = NowX;
+                LastY = NowY;
+                NowX = double.Parse(cordX.Text);
+                NowY = double.Parse(cordY.Text);
+
+                Area = Area + 0.5 * detCalc(LastX, LastY, NowX, NowY);
+
+                if (count == 1)
+                {
+                    IniX = NowX;
+                    IniY = NowY;
+                }
             }
   
         }
@@ -57,7 +66,16 @@ namespace AreaCalculator
             NowX = double.Parse(cordX.Text);
             NowY = double.Parse(cordY.Text);
 
-            Form.label1.Text = Math.Abs(Area + 0.5 * detCalc(LastX, LastY, NowX, NowY) + 0.5 * detCalc(NowX, NowY, IniX, IniY)).ToString() + " " + (count + 1).ToString();
+            if (count >= 2)
+            {
+                Form.label1.Text = "面积为：" + Math.Abs(Area + 0.5 * detCalc(LastX, LastY, NowX, NowY) + 0.5 * detCalc(NowX, NowY, IniX, IniY)).ToString();
+                Form.label2.Text = "是" + (count + 1).ToString() + "边形";
+            }
+            else
+            {
+                Form.label1.Text = "请输入三个及以上顶点";
+                Form.label2.Text = "";
+            }
             Form.Show();
         }
 
