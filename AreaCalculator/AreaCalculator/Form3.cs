@@ -27,8 +27,15 @@ namespace AreaCalculator
         private void button2_Click(object sender, EventArgs e)
         {
             Form5 Form = new Form5();
-            double radius = double.Parse(textBox1.Text);
-            Form.label1.Text= calcCircleArea(radius).ToString();
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                Form.label1.Text = "输入不能为空";
+            }
+            else
+            {
+                double radius = double.Parse(textBox1.Text);
+                Form.label1.Text = calcCircleArea(radius).ToString("F3");
+            }
             Form.Show();
         }
 
