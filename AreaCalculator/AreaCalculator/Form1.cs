@@ -27,14 +27,30 @@ namespace AreaCalculator
             if (radioButton1.Checked == true)
             {
                 this.Hide();
-                polygonForm Form = new polygonForm();
-                Form.Show();
+                if (radioButton3.Checked == true)
+                {
+                    polygonForm Form = new polygonForm(true);
+                    Form.Show();
+                }
+                if (radioButton4.Checked == true)
+                {
+                    polygonForm Form = new polygonForm(false);
+                    Form.Show();
+                }
             }
             else if (radioButton2.Checked == true)
             {
                 this.Hide();
-                circleForm Form = new circleForm();
-                Form.Show();
+                if (radioButton3.Checked == true)
+                {
+                    circleForm Form = new circleForm(true);
+                    Form.Show();
+                }
+                if (radioButton4.Checked == true)
+                {
+                    circleForm Form = new circleForm(false);
+                    Form.Show();
+                }
             }
         }
     }

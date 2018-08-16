@@ -15,17 +15,19 @@ namespace AreaCalculator
 
         private int count=0;
         private double LastX = 0, LastY = 0, NowX = 0, NowY = 0, Area = 0, IniX = 0, IniY = 0;
+        bool UnitCheck;
 
-        public polygonForm()
+        public polygonForm(bool checkedvalue)
         {
             InitializeComponent();
+            UnitCheck = checkedvalue;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mainForm Form0 = new mainForm();
-            Form0.Show();
+            mainForm Form = new mainForm();
+            Form.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -60,21 +62,31 @@ namespace AreaCalculator
         private void button3_Click(object sender, EventArgs e)
         {
             Form4 Form = new Form4();
+            mainForm Form0 = new mainForm();
 
             LastX = NowX;
             LastY = NowY;
             NowX = double.Parse(cordX.Text);
             NowY = double.Parse(cordY.Text);
 
-            if (count >= 3)
+            if (count >= 2)
             {
-                Form.label1.Text = "面积为：" + Math.Abs(Area + 0.5 * detCalc(LastX, LastY, NowX, NowY) + 0.5 * detCalc(NowX, NowY, IniX, IniY)).ToString("F3");
-                Form.label2.Text = "是" + (count + 1).ToString() + "边形";
-            }
-            else if (count == 2)
-            {
-                Form.label1.Text = "面积为：" + Math.Abs(Area + 0.5 * detCalc(LastX, LastY, NowX, NowY) + 0.5 * detCalc(NowX, NowY, IniX, IniY)).ToString("F3");
-                Form.label2.Text = "是三角形";
+                if (UnitCheck)
+                {
+                    Form.label1.Text = "面积为：" + Math.Abs(Area + 0.5 * detCalc(LastX, LastY, NowX, NowY) + 0.5 * detCalc(NowX, NowY, IniX, IniY)).ToString("F3") + "平方厘米";
+                }
+                else
+                {
+                    Form.label1.Text = "面积为：" + (6.4516 * Math.Abs(Area + 0.5 * detCalc(LastX, LastY, NowX, NowY) + 0.5 * detCalc(NowX, NowY, IniX, IniY))).ToString("F3") + "平方厘米";
+                }
+                if (count > 2)
+                {
+                    Form.label2.Text = "是" + (count + 1).ToString() + "边形";
+                }
+                else
+                {
+                    Form.label2.Text = "是三角形";
+                }
             }
             else
             {
