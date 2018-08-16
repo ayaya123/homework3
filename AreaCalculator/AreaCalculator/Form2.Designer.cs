@@ -51,9 +51,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(178, 359);
+            this.button2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button2.Location = new System.Drawing.Point(127, 348);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(90, 40);
             this.button2.TabIndex = 1;
             this.button2.Text = "下一个";
             this.button2.UseVisualStyleBackColor = true;
@@ -61,9 +62,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(522, 359);
+            this.button3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button3.Location = new System.Drawing.Point(277, 348);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(90, 40);
             this.button3.TabIndex = 2;
             this.button3.Text = "计算面积";
             this.button3.UseVisualStyleBackColor = true;
@@ -71,14 +73,14 @@
             // 
             // cordX
             // 
-            this.cordX.Location = new System.Drawing.Point(220, 152);
+            this.cordX.Location = new System.Drawing.Point(185, 152);
             this.cordX.Name = "cordX";
             this.cordX.Size = new System.Drawing.Size(100, 25);
             this.cordX.TabIndex = 3;
             // 
             // cordY
             // 
-            this.cordY.Location = new System.Drawing.Point(220, 227);
+            this.cordY.Location = new System.Drawing.Point(185, 227);
             this.cordY.Name = "cordY";
             this.cordY.Size = new System.Drawing.Size(100, 25);
             this.cordY.TabIndex = 4;
@@ -86,7 +88,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(143, 155);
+            this.label1.Location = new System.Drawing.Point(146, 155);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(15, 15);
             this.label1.TabIndex = 5;
@@ -96,24 +98,24 @@
             // 
             this.label2.Location = new System.Drawing.Point(146, 230);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 15);
+            this.label2.Size = new System.Drawing.Size(33, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "Y";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(124, 103);
+            this.label3.Location = new System.Drawing.Point(143, 103);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 15);
+            this.label3.Size = new System.Drawing.Size(337, 15);
             this.label3.TabIndex = 6;
-            this.label3.Text = "输入多边形顶点坐标";
+            this.label3.Text = "沿多边形边界按顺时针或逆时针顺序输入顶点坐标";
             // 
             // polygonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(607, 453);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

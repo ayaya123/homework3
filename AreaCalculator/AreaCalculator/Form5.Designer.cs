@@ -34,7 +34,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(264, 180);
+            this.label1.Location = new System.Drawing.Point(55, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 15);
             this.label1.TabIndex = 0;
@@ -44,7 +44,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(282, 223);
             this.Controls.Add(this.label1);
             this.Name = "Form5";
             this.Text = "计算结果";

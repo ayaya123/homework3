@@ -56,43 +56,59 @@ namespace AreaCalculator
                     IniY = NowY;
                 }
             }
-  
+
+            cordX.Text = "";
+            cordY.Text = "";
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Form4 Form = new Form4();
-            mainForm Form0 = new mainForm();
 
-            LastX = NowX;
-            LastY = NowY;
-            NowX = double.Parse(cordX.Text);
-            NowY = double.Parse(cordY.Text);
-
-            if (count >= 2)
+            if (string.IsNullOrEmpty(cordX.Text) || string.IsNullOrEmpty(cordY.Text))
             {
-                if (UnitCheck)
-                {
-                    Form.label1.Text = "面积为：" + Math.Abs(Area + 0.5 * detCalc(LastX, LastY, NowX, NowY) + 0.5 * detCalc(NowX, NowY, IniX, IniY)).ToString("F3") + "平方厘米";
-                }
-                else
-                {
-                    Form.label1.Text = "面积为：" + (6.4516 * Math.Abs(Area + 0.5 * detCalc(LastX, LastY, NowX, NowY) + 0.5 * detCalc(NowX, NowY, IniX, IniY))).ToString("F3") + "平方厘米";
-                }
-                if (count > 2)
-                {
-                    Form.label2.Text = "是" + (count + 1).ToString() + "边形";
-                }
-                else
-                {
-                    Form.label2.Text = "是三角形";
-                }
+                Form.label1.Text = "输入不能为空";
+                Form.label2.Text = "请重新输入三个及以上顶点";
             }
             else
             {
-                Form.label1.Text = "请输入三个及以上顶点";
-                Form.label2.Text = "";
+                LastX = NowX;
+                LastY = NowY;
+                NowX = double.Parse(cordX.Text);
+                NowY = double.Parse(cordY.Text);
+
+                if (count >= 2)
+                {
+                    if (UnitCheck)
+                    {
+                        Form.label1.Text = "面积为：" + Math.Abs(Area + 0.5 * detCalc(LastX, LastY, NowX, NowY) + 0.5 * detCalc(NowX, NowY, IniX, IniY)).ToString("F3") + "平方厘米";
+                    }
+                    else
+                    {
+                        Form.label1.Text = "面积为：" + (6.4516 * Math.Abs(Area + 0.5 * detCalc(LastX, LastY, NowX, NowY) + 0.5 * detCalc(NowX, NowY, IniX, IniY))).ToString("F3") + "平方厘米";
+                    }
+                    if (count > 2)
+                    {
+                        Form.label2.Text = "是" + (count + 1).ToString() + "边形";
+                    }
+                    else
+                    {
+                        Form.label2.Text = "是三角形";
+                    }
+                }
+                else
+                {
+                    Form.label1.Text = "请重新输入三个及以上顶点";
+                    Form.label2.Text = "";
+                }
+
+                cordX.Text = "";
+                cordY.Text = "";
+
+                count = 0;
             }
+
             Form.Show();
         }
 

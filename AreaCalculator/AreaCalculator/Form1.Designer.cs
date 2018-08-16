@@ -69,7 +69,7 @@
             // nextStep
             // 
             this.nextStep.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.nextStep.Location = new System.Drawing.Point(285, 319);
+            this.nextStep.Location = new System.Drawing.Point(285, 350);
             this.nextStep.Name = "nextStep";
             this.nextStep.Size = new System.Drawing.Size(206, 74);
             this.nextStep.TabIndex = 2;
@@ -81,7 +81,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(75, 47);
+            this.label1.Location = new System.Drawing.Point(20, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(250, 50);
             this.label1.TabIndex = 3;
@@ -90,9 +90,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(84, 187);
+            this.label2.Font = new System.Drawing.Font("微软雅黑", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(20, 176);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 15);
+            this.label2.Size = new System.Drawing.Size(174, 50);
             this.label2.TabIndex = 4;
             this.label2.Text = "选择单位";
             // 
@@ -100,9 +101,10 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Checked = true;
+            this.radioButton3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.radioButton3.Location = new System.Drawing.Point(33, 29);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(58, 19);
+            this.radioButton3.Size = new System.Drawing.Size(73, 31);
             this.radioButton3.TabIndex = 5;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "厘米";
@@ -111,9 +113,10 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
+            this.radioButton4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.radioButton4.Location = new System.Drawing.Point(450, 29);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(58, 19);
+            this.radioButton4.Size = new System.Drawing.Size(73, 31);
             this.radioButton4.TabIndex = 6;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "英寸";
@@ -132,7 +135,7 @@
             // 
             this.panel2.Controls.Add(this.radioButton3);
             this.panel2.Controls.Add(this.radioButton4);
-            this.panel2.Location = new System.Drawing.Point(107, 223);
+            this.panel2.Location = new System.Drawing.Point(107, 266);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(569, 78);
             this.panel2.TabIndex = 8;

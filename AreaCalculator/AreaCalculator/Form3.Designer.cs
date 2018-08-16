@@ -47,16 +47,17 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(351, 194);
+            this.textBox1.Location = new System.Drawing.Point(259, 191);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 25);
             this.textBox1.TabIndex = 1;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(351, 364);
+            this.button2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button2.Location = new System.Drawing.Point(249, 350);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(90, 40);
             this.button2.TabIndex = 2;
             this.button2.Text = "计算面积";
             this.button2.UseVisualStyleBackColor = true;
@@ -65,7 +66,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(183, 203);
+            this.label1.Location = new System.Drawing.Point(110, 194);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 15);
             this.label1.TabIndex = 3;
@@ -75,7 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(607, 453);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);

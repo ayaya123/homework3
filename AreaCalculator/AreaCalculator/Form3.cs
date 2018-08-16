@@ -49,6 +49,9 @@ namespace AreaCalculator
                     Form.label1.Text = "面积是" + (6.4156 * calcCircleArea(radius)).ToString("F3") + "平方厘米";
                 }
             }
+
+            textBox1.Text = "";
+
             Form.Show();
         }
 
