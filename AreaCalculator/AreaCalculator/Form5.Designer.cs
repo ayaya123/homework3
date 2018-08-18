@@ -39,6 +39,7 @@
             this.label1.Size = new System.Drawing.Size(55, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
+            this.label1.UseWaitCursor = true;
             // 
             // Form5
             // 

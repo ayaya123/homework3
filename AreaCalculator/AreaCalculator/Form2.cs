@@ -32,7 +32,7 @@ namespace AreaCalculator
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(cordX.Text) || string.IsNullOrEmpty(cordY.Text))
+            /*if (string.IsNullOrEmpty(cordX.Text) || string.IsNullOrEmpty(cordY.Text))
             {
                 Form4 Form = new Form4();
                 Form.label1.Text = "输入不能为空";
@@ -58,7 +58,7 @@ namespace AreaCalculator
             }
 
             cordX.Text = "";
-            cordY.Text = "";
+            cordY.Text = "";*/
 
         }
 
@@ -66,7 +66,7 @@ namespace AreaCalculator
         {
             Form4 Form = new Form4();
 
-            if (string.IsNullOrEmpty(cordX.Text) || string.IsNullOrEmpty(cordY.Text))
+            /*if (string.IsNullOrEmpty(cordX.Text) || string.IsNullOrEmpty(cordY.Text))
             {
                 Form.label1.Text = "输入不能为空";
                 Form.label2.Text = "请重新输入三个及以上顶点";
@@ -107,14 +107,14 @@ namespace AreaCalculator
                 cordY.Text = "";
 
                 count = 0;
-            }
+            }*/
 
             Form.Show();
         }
 
-        private double detCalc(double detA, double detB, double detC, double detD)
+        /*private double detCalc(double detA, double detB, double detC, double detD)
         {
             return detA * detD - detB * detC;
-        }
+        }*/
     }
 }
