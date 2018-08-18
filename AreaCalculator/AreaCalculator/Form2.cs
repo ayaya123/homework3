@@ -13,8 +13,8 @@ namespace AreaCalculator
     public partial class polygonForm : Form
     {
 
-        private int count=0;
-        private double LastX = 0, LastY = 0, NowX = 0, NowY = 0, Area = 0, IniX = 0, IniY = 0;
+        //private int count=0;
+        //private double LastX = 0, LastY = 0, NowX = 0, NowY = 0, Area = 0, IniX = 0, IniY = 0;
         bool UnitCheck;
 
         public polygonForm(bool checkedvalue)
@@ -26,12 +26,14 @@ namespace AreaCalculator
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mainForm Form = new mainForm();
-            Form.Show();
+            //mainForm Form = new mainForm();
+            //Form.Show();
+            mainForm.ShowMainForm();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             /*if (string.IsNullOrEmpty(cordX.Text) || string.IsNullOrEmpty(cordY.Text))
             {
                 Form4 Form = new Form4();
@@ -60,11 +62,27 @@ namespace AreaCalculator
             cordX.Text = "";
             cordY.Text = "";*/
 
+            if (string.IsNullOrEmpty(cordX.Text) || string.IsNullOrEmpty(cordY.Text))
+            {
+                Form4 Form = new Form4();
+                Form.label1.Text = "输入不能为空";
+                Form.label2.Text = "";
+                Form.Show();
+            }
+            else
+            {
+                PolygonAreaCalc.CountPlus();
+                PolygonAreaCalc.NextSetCord(double.Parse(cordX.Text), double.Parse(cordY.Text));
+
+                PolygonAreaCalc.SetIni();
+            }
+            ClearText();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form4 Form = new Form4();
+            //Form4 Form = new Form4();
 
             /*if (string.IsNullOrEmpty(cordX.Text) || string.IsNullOrEmpty(cordY.Text))
             {
@@ -109,7 +127,44 @@ namespace AreaCalculator
                 count = 0;
             }*/
 
-            Form.Show();
+            if (string.IsNullOrEmpty(cordX.Text) || string.IsNullOrEmpty(cordY.Text))
+            {
+                Form4 Form = new Form4();
+
+                Form.label1.Text = "输入不能为空";
+                Form.label2.Text = "请重新输入三个及以上顶点";
+
+                Form.Show();
+            }
+            else
+            {
+                PolygonAreaCalc.NextSetCord(double.Parse(cordX.Text), double.Parse(cordY.Text));
+
+                if (PolygonAreaCalc.count >= 2)
+                {
+                    PolygonAreaCalc.ResultOutput(UnitCheck);
+                }
+                else
+                {
+                    Form4 Form = new Form4();
+
+                    Form.label1.Text = "请重新输入三个及以上顶点";
+                    Form.label2.Text = "";
+
+                    Form.Show();
+                }
+
+                ClearText();
+
+                PolygonAreaCalc.count = 0;
+                //Form.Show();
+            }
+        }
+
+        private void ClearText()
+        {
+            cordX.Text = "";
+            cordY.Text = "";
         }
 
         /*private double detCalc(double detA, double detB, double detC, double detD)

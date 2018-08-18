@@ -29,13 +29,15 @@ namespace AreaCalculator
                 this.Hide();
                 if (radioButton3.Checked == true)
                 {
-                    polygonForm Form = new polygonForm(true);
-                    Form.Show();
+                    //polygonForm Form = new polygonForm(true);
+                    //Form.Show();
+                    PolyFormation(radioButton3.Checked);
                 }
                 if (radioButton4.Checked == true)
                 {
-                    polygonForm Form = new polygonForm(false);
-                    Form.Show();
+                    //polygonForm Form = new polygonForm(false);
+                    //Form.Show();
+                    PolyFormation(radioButton3.Checked);
                 }
             }
             else if (radioButton2.Checked == true)
@@ -43,15 +45,35 @@ namespace AreaCalculator
                 this.Hide();
                 if (radioButton3.Checked == true)
                 {
-                    circleForm Form = new circleForm(true);
-                    Form.Show();
+                    //circleForm Form = new circleForm(true);
+                    //Form.Show();
+                    CircFormation(radioButton3.Checked);
                 }
                 if (radioButton4.Checked == true)
                 {
-                    circleForm Form = new circleForm(false);
-                    Form.Show();
+                    //circleForm Form = new circleForm(false);
+                    //Form.Show();
+                    CircFormation(radioButton3.Checked);
                 }
             }
+        }
+
+        private void PolyFormation(bool CenSelected)
+        {
+            polygonForm Form = new polygonForm(CenSelected);
+            Form.Show();
+        }
+
+        private void CircFormation(bool CenSelected)
+        {
+            circleForm Form = new circleForm(CenSelected);
+            Form.Show();
+        }
+
+        public static void ShowMainForm()
+        {
+            mainForm Form = new mainForm();
+            Form.Show();
         }
     }
 }

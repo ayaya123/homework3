@@ -24,8 +24,9 @@ namespace AreaCalculator
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mainForm Form = new mainForm();
-            Form.Show();
+            //mainForm Form = new mainForm();
+            //Form.Show();
+            mainForm.ShowMainForm();
         }
 
         private void button2_Click(object sender, EventArgs e)
